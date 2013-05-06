@@ -1,12 +1,5 @@
-<!DOCTYPE html>
 <html>
-
-  <head>
-    <meta charset='utf-8' />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="Michen6.github.io : " />
-
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+<head>
 <link rel="stylesheet" type="text/css"
   href="http://latex.codecogs.com/css/equation-embed.css" />
 <!--[if lte IE 7]>
@@ -18,26 +11,8 @@
   src="http://latex.codecogs.com/js/eq_editor-lite-11.js" ></script>
 <script type="text/javascript"
   src="http://latex.codecogs.com/latexit.js"></script>
-    <title>Michen6.github.io</title>
-  </head>
-
-  <body>
-
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/michen6">View on GitHub</a>
-
-          <h1 id="project_title">Michen6.github.io</h1>
-          <h2 id="project_tagline"></h2>
-
-        </header>
-    </div>
-
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h3>Welcome to LaTeX.</h3>
+</head>
+<body>
 
 <div id="editor"></div>
 <textarea id="testbox" rows="3" cols="40"></textarea>
@@ -49,35 +24,19 @@
   EqEditor.add(a,false);
 </script>
 
-<h3>Cost function</h3>
-
-<pre><code>J(\theta) = \frac{1}{2m} \sum_{i = 1}^{m} \left( h_{\theta} ( x^{(i)} ) - y^{(i)} \right)^{2}
-</code></pre>
-
+Cost function<br />
+<code>J(\theta) = \frac{1}{2m} \sum_{i = 1}^{m} \left( h_{\theta} ( x^{(i)} ) - y^{(i)} \right)^{2}
+</code>
 <div lang="latex">
 J(\theta) = \frac{1}{2m} \sum_{i = 1}^{m} \left( h_{\theta} ( x^{(i)} ) - y^{(i)} \right)^{2}
 </div>
-
-<h3>Gradient Descent</h3>
-
-<pre><code>\theta_{j} = \theta_{j} - \alpha \frac{1}{m} \sum_{i=1}^m \left( h_{\theta} (x^{(i)}) - y^{(i)} \right) x_{j}^{(i)}
-</code></pre>
-
+<br />
+Gradient Descent<br />
+<code>\theta_{j} = \theta_{j} - \alpha \frac{1}{m} \sum_{i=1}^m \left( h_{\theta} (x^{(i)}) - y^{(i)} \right) x_{j}^{(i)}
+</code>
 <div lang="latex">
 \theta_{j} = \theta_{j} - \alpha \frac{1}{m} \sum_{i=1}^m \left( h_{\theta} (x^{(i)}) - y^{(i)} \right) x_{j}^{(i)}
 </div>
 
-      </section>
-    </div>
-
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
-      </footer>
-    </div>
-
-    
-
-  </body>
+</body>
 </html>
