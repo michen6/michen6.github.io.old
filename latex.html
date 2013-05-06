@@ -13,30 +13,28 @@
   src="http://latex.codecogs.com/latexit.js"></script>
 </head>
 <body>
+
+<div id="editor"></div>
+<textarea id="testbox" rows="3" cols="40"></textarea>
+<img id="equation" /><br/>
+
+<script type="text/javascript">
+  EqEditor.embed('editor');
+  var a=new EqTextArea('equation', 'testbox');
+  EqEditor.add(a,false);
+</script>
+
 Cost function
+J(\theta) = \frac{1}{2m} \sum_{i = 1}^{m} \left( h_{\theta} ( x^{(i)} ) - y^{(i)} \right)^{2}
 <div lang="latex">
 J(\theta) = \frac{1}{2m} \sum_{i = 1}^{m} \left( h_{\theta} ( x^{(i)} ) - y^{(i)} \right)^{2}
 </div>
 
 Gradient Descent
+\theta_{j} = \theta_{j} - \alpha \frac{1}{m} \sum_{i=1}^m \left( h_{\theta} (x^{(i)}) - y^{(i)} \right) x_{j}^{(i)}
 <div lang="latex">
 \theta_{j} = \theta_{j} - \alpha \frac{1}{m} \sum_{i=1}^m \left( h_{\theta} (x^{(i)}) - y^{(i)} \right) x_{j}^{(i)}
 </div>
-
-<div id="editor"></div>
-<textarea id="testbox" rows="3" cols="40"></textarea>
-<img id="equation" /><br/>
-<textarea id="testbox2" rows="3" cols="40"></textarea>
-<img id="equation2" />
-
-<script type="text/javascript">
-  EqEditor.embed('editor');
-  var a=new EqTextArea('equation', 'testbox');
-  EqEditor.add(a,false);   
-
-  var b=new EqTextArea('equation2', 'testbox2');   
-  EqEditor.add(b,false);
-</script>
 
 </body>
 </html>
