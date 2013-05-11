@@ -53,8 +53,6 @@ var HTMLPreview = {
 		for(i = 0; i < a.length; ++i) {
 			if(a[i].href) {
 				href = a[i].href; //Get absolute URL
-				a[i].href = href.replace(/http:\/\/michen6\.github\.io\/michen6/gi,'https://github.com/michen6');
-				
 				if(href.indexOf('#') > 0) { //Check if it's an anchor
 					a[i].href = 'http://' + location.hostname + location.pathname + location.search + '#' + a[i].hash.substring(1); //Then rewrite URL with support for empty anchor
 				}
