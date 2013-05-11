@@ -58,6 +58,7 @@ var HTMLPreview = {
 
 				if(href.indexOf('blob') > 0 {
 					a[i].href = href.replace(/blob[.]/gi,'tree/master');
+				}
 				
 				if(href.indexOf('#') > 0) { //Check if it's an anchor
 					a[i].href = 'http://' + location.hostname + location.pathname + location.search + '#' + a[i].hash.substring(1); //Then rewrite URL with support for empty anchor
