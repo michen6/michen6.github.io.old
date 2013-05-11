@@ -17,7 +17,7 @@ var HTMLPreview = {
 	},
 
 	replaceAssets: function() {
-		var link, script, frame, a, i, href, src;
+		var link, script, frame, a, i, href, src, branch;
 		link = document.getElementsByTagName('link');
 		for(i = 0; i < link.length; ++i) {
 			if(link[i].rel
@@ -56,7 +56,12 @@ var HTMLPreview = {
 			
 				href = a[i].href; //Get absolute URL
 				
-
+				branch = href.replace(/[.]blob\//gi,'').replace(/\/[.]/gi,'');
+				
+				if(href.indexOf('blob') > 0 && this.raw().indexOf(branch) = 0) {
+					a[i].href = href.replace(/blob[.]/gi,'blob/' + branch);
+				}
+				
 				if(href.indexOf('#') > 0) { //Check if it's an anchor
 					a[i].href = 'http://' + location.hostname + location.pathname + location.search + '#' + a[i].hash.substring(1); //Then rewrite URL with support for empty anchor
 				}
