@@ -55,16 +55,16 @@ var HTMLPreview = {
 				a[i].href = a[i].href.replace(/http:\/\/michen6\.github\.io\/michen6/gi,'https://github.com/michen6');
 			
 				href = a[i].href; //Get absolute URL
-				
-				if(href.indexOf('gh-pages') > 0) {
-					a[i].href = href.replace(/blob[.]/gi,'blob/gh-pages');
-				}
-				
+
 				if(href.indexOf('#') > 0) { //Check if it's an anchor
 					a[i].href = 'http://' + location.hostname + location.pathname + location.search + '#' + a[i].hash.substring(1); //Then rewrite URL with support for empty anchor
 				}
 				else if(href.indexOf('//raw.github.com') > 0 || href.indexOf('//bitbucket.org') > 0) { //Check if it's from raw.github.com or bitbucket.org
 					a[i].href = 'http://' + location.hostname + location.pathname + '?' + href; //Then rewrite URL so it can be loaded using YQL
+				}
+								
+				if(href.indexOf('gh-pages') > 0) {
+					a[i].href = href.replace(/blob[.]/gi,'blob/gh-pages');
 				}
 			}
 		}
