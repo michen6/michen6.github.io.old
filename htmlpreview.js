@@ -62,10 +62,6 @@ var HTMLPreview = {
 				else if(href.indexOf('//raw.github.com') > 0 || href.indexOf('//bitbucket.org') > 0) { //Check if it's from raw.github.com or bitbucket.org
 					a[i].href = 'http://' + location.hostname + location.pathname + '?' + href; //Then rewrite URL so it can be loaded using YQL
 				}
-								
-				if(href.indexOf('gh-pages') > 0) {
-					a[i].href = href.replace(/blob[.]/gi,'blob/gh-pages');
-				}
 			}
 		}
 	},
