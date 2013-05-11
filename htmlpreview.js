@@ -52,7 +52,7 @@ var HTMLPreview = {
 		a = document.getElementsByTagName('a');
 		for(i = 0; i < a.length; ++i) {
 			if(a[i].href) {
-				a[i].href = href.replace(/http:\/\/michen6\.github\.io\/michen6/gi,'https://github.com/michen6');
+				a[i].href = a[i].href.replace(/http:\/\/michen6\.github\.io\/michen6/gi,'https://github.com/michen6');
 			
 				href = a[i].href; //Get absolute URL
 				
